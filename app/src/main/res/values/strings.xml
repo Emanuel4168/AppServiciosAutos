@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppServiciosAutos</string>
+    <string name="lblMsg1_text"> Dar de Alta: </string>
+    <string name="lblMSG2"> Consultas: </string>
+</resources>
