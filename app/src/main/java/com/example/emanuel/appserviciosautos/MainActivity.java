@@ -44,9 +44,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private void openSelectActivity( int value){
+    private void openSelectActivity(int value){
         intent = new Intent(this, SelectActivity.class);
         intent.putExtra("type",value);
         startActivity(intent);
+    }
+
+    public void openActivity(int value) {
+        intent = new Intent(this, SelectActivity.class);
+        intent.putExtra("type",value);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 }
