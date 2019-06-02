@@ -1,6 +1,9 @@
 package com.example.emanuel.appserviciosautos.utils;
 
 public class DataBaseConstants {
+
+    public static final String DB_NAME = "SERVICESDB";
+
     public static final String PERSONS_TABLE = "PERSONS";
     public static final String PERSONS_RFC = "rfc";
     public static final String PERSONS_NAME = "name";
