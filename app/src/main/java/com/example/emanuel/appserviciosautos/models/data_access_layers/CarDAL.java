@@ -21,8 +21,8 @@ public class CarDAL {
         errorDefault = "No fué posible realizar la operación, es probable que ya exista un carro con esa placa";
     }
 
-    public boolean insert(String plate, String trademark, String model, int year) {
-        String insert = "INSERT INTO " + DataBaseConstants.CARS_TABLE + " VALUES ( '" + plate + "', '" + trademark + "', '" + model + "', " + year + ")" + "1)";
+    public boolean insert(String[] fields) {
+        String insert = "INSERT INTO " + DataBaseConstants.CARS_TABLE + " VALUES ( '" + fields[0] + "', '" + fields[1] + "', '" + fields[2] + "', " + fields[3] + ")" + "1)";
         try {
             dataBase.execSQL(insert);
             error = "";
@@ -56,11 +56,11 @@ public class CarDAL {
         }
     }
 
-    public boolean update(String plate, String trademark, String model, int year){
-        String update="Update "+DataBaseConstants.CARS_TABLE+" set "+DataBaseConstants.CARS_PLATE+"='"+plate+
-                "', "+DataBaseConstants.CARS_TRADEMARK+"='"+trademark+"', "+DataBaseConstants.CARS_MODEL+"='"+model
-                + DataBaseConstants.CARS_YEAR+"='"+year+"', "
-                +"' where "+DataBaseConstants.CARS_PLATE+"Like"+"'"+plate+"'";
+    public boolean update(String[] fields){
+        String update="Update "+DataBaseConstants.CARS_TABLE+" set "+DataBaseConstants.CARS_PLATE+"='"+fields[0]+
+                "', "+DataBaseConstants.CARS_TRADEMARK+"='"+fields[1]+"', "+DataBaseConstants.CARS_MODEL+"='"+fields[2]
+                + DataBaseConstants.CARS_YEAR+"='"+fields[3]+"', "
+                +"' where "+DataBaseConstants.CARS_PLATE+"Like"+"'"+fields[0]+"'";
         try{
             dataBase.execSQL(update);
             error = "";

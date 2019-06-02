@@ -20,6 +20,10 @@
         <activity android:name=".RegistryActivity" />
         <activity android:name=".RemoveActivity" />
         <activity android:name=".SelectActivity" />
+<<<<<<< HEAD
+=======
+        <activity android:name=".CarRegistryActivity"></activity>
+>>>>>>> ba059f727d898595b2c05cdc7601bbb1c7e62b90
     </application>
 
 </manifest>

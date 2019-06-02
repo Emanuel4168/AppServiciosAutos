@@ -4,58 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistryActivity">
+    tools:context=".CarRegistryActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView2"
         android:layout_width="80"
         android:layout_height="80"
-        android:layout_marginEnd="168dp"
-        android:layout_marginStart="168dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginStart="165dp"
         android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user_burned" />
+        app:srcCompat="@drawable/car_icon" />
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="82dp"
-        android:layout_marginStart="82dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginStart="85dp"
         android:layout_marginTop="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/txtRFC"
+                android:id="@+id/txtPtate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/txt_rfc_hint"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="168dp" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/txtName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/txt_name_hint"
+                android:hint="@string/txt_plate_hint"
                 android:inputType="textPersonName" />
 
         </android.support.design.widget.TextInputLayout>
@@ -65,43 +49,68 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/txtCity"
+                android:id="@+id/txtTrademark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/txt_city_hint"
+                android:hint="@string/txt_trademark_hint"
                 android:inputType="textPersonName" />
 
         </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/txtModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/txt_model_hint"
+                android:inputType="textPersonName" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/txtYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/txt_year_text"
+                android:inputType="number" />
+
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
+        android:layout_marginEnd="99dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <Button
-            android:id="@+id/btnRemove"
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/btn_submit_text" />
 
         <Button
-            android:id="@+id/btnUpdate"
+            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/btn_update_text" />
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

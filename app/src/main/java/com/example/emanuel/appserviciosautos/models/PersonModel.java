@@ -13,27 +13,22 @@ public class PersonModel implements SQLiteModel{
         dal = new PersonDAL(context);
     }
 
-    @Override
-    public boolean insert(String RFC, String name, String city) {
-        return dal.insert(RFC,name,city);
+    public boolean insert(String[] fields) {
+        return dal.insert(fields);
     }
 
-    @Override
     public String[] consult(String RFC) {
         return dal.consult(RFC);
     }
 
-    @Override
-    public boolean update(String RFC, String name, String city) {
-        return dal.update(RFC,name,city);
+    public boolean update(String[] fields) {
+        return dal.update(fields);
     }
 
-    @Override
     public boolean delete(String RFC) {
         return dal.delete(RFC);
     }
 
-    @Override
     public String getCurrentError() {
         return dal.getCurrentError();
     }
