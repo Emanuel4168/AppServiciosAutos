@@ -52,6 +52,7 @@ public class RemoveActivity extends AppCompatActivity implements View.OnClickLis
             return;
 
         if(!model.delete(txtID.getText().toString())){
+            //error
             return;
         }
 

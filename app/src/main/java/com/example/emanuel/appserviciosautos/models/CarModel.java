@@ -4,8 +4,9 @@ import android.content.Context;
 
 import com.example.emanuel.appserviciosautos.models.data_access_layers.CarDAL;
 import com.example.emanuel.appserviciosautos.models.data_access_layers.PersonDAL;
+import com.example.emanuel.appserviciosautos.models.data_access_layers.SQLiteModel;
 
-public class CarModel {
+public class CarModel implements SQLiteModel{
     private CarDAL dal;
 
     public CarModel(Context context){
@@ -28,6 +29,7 @@ public class CarModel {
         return dal.delete(plate);
     }
 
+    @Override
     public String getCurrentError() {
         return dal.getCurrentError();
     }
