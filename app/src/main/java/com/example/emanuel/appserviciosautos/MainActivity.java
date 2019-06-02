@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void openSelectActivity(String key, int value){
-        intent = new Intent(this, ConsultActivity.class);
+        intent = new Intent(this, SelectActivity.class);
         intent.putExtra(key,value);
         startActivity(intent);
     }
