@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="000000"
+    android:background="@android:color/background_light"
     tools:context=".MainActivity">
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_marginEnd="164dp"
         android:layout_marginStart="162dp"
         android:layout_marginTop="64dp"
-        android:text="@string/lblMsg1_text"
+        android:text="@string/lblmsg1_text"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -42,7 +42,7 @@
             android:layout_weight="1"
             android:clickable="true"
             app:backgroundTint="@android:color/holo_blue_dark"
-            app:srcCompat="@drawable/User_burned" />
+            app:srcCompat="@drawable/user_burned" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/btnCar"
@@ -80,7 +80,7 @@
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/lblMSG2"
+            android:text="@string/lblmsg2"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -91,7 +91,7 @@
             android:layout_height="100dp"
             android:clickable="true"
             app:backgroundTint="@android:color/holo_purple"
-            app:srcCompat="@drawable/Agenda" />
+            app:srcCompat="@drawable/agenda" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

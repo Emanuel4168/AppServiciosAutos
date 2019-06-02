@@ -26,27 +26,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
 
         if(view == this.btnPerson){
-            openSelectActivity("person",0);
+            openSelectActivity(0);
             return;
         }
         if(view == this.btnCar){
-            openSelectActivity("car",1);
+            openSelectActivity(1);
             return;
         }
         if(view == this.btnService){
-            openSelectActivity("service",2);
+            openSelectActivity(2);
             return;
         }
         if(view == this.btnQuerry){
-            openSelectActivity("querry",3);
+
             return;
         }
 
     }
 
-    private void openSelectActivity(String key, int value){
+    private void openSelectActivity( int value){
         intent = new Intent(this, SelectActivity.class);
-        intent.putExtra(key,value);
+        intent.putExtra("type",value);
         startActivity(intent);
     }
 }
