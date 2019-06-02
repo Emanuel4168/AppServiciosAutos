@@ -9,6 +9,11 @@
     <string name="btn_submit_text"> Guardar </string>
     <string name="btn_update_text"> Modificar </string>
 
+    <string name="txt_plate_hint"> Placas: </string>
+    <string name="txt_trademark_hint"> Marca: </string>
+    <string name="txt_model_hint"> Modelo:</string>
+    <string name="txt_year_text"> Año: </string>
+
     <string name="txt_id_hint"> ID: </string>
     <string name="btn_remove_text"> Dar de Baja </string>
 
