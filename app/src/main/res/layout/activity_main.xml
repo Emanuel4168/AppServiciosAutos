@@ -85,6 +85,14 @@
             android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:backgroundTint="@android:color/holo_purple"
+            app:srcCompat="@drawable/Agenda" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
