@@ -21,8 +21,8 @@ public class PersonDAL {
         errorDefault = "No fué posible realizar la operación, es probable que ya exista alguien con ese RFC";
     }
 
-    public boolean insert(String RFC, String name, String city) {
-        String insert = "INSERT INTO " + DataBaseConstants.PERSONS_TABLE + " VALUES ( '" + RFC + "', '" + name + "', '" + city + "', " + "1)";
+    public boolean insert(String[] fields) {
+        String insert = "INSERT INTO " + DataBaseConstants.PERSONS_TABLE + " VALUES ( '" + fields[0] + "', '" + fields[1] + "', '" + fields[2] + "', " + "1)";
         try {
             dataBase.execSQL(insert);
             error = "";
@@ -56,10 +56,10 @@ public class PersonDAL {
         }
     }
 
-    public boolean update(String RFC, String name, String city){
-        String update="Update "+DataBaseConstants.PERSONS_TABLE+" set "+DataBaseConstants.PERSONS_RFC+"='"+RFC+
-                "', "+DataBaseConstants.PERSONS_NAME+"='"+name+"', "+DataBaseConstants.PERSONS_CITY+"='"+city
-                +"' where "+DataBaseConstants.PERSONS_RFC+"Like"+"'"+RFC+"'";
+    public boolean update(String[] fields){
+        String update="Update "+DataBaseConstants.PERSONS_TABLE+" set "+DataBaseConstants.PERSONS_RFC+"='"+fields[0]+
+                "', "+DataBaseConstants.PERSONS_NAME+"='"+fields[1]+"', "+DataBaseConstants.PERSONS_CITY+"='"+fields[2]
+                +"' where "+DataBaseConstants.PERSONS_RFC+"Like"+"'"+fields[0]+"'";
         try{
             dataBase.execSQL(update);
             error = "";

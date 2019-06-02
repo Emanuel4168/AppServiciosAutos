@@ -13,16 +13,16 @@ public class PersonModel implements SQLiteModel{
         dal = new PersonDAL(context);
     }
 
-    public boolean insert(String RFC, String name, String city) {
-        return dal.insert(RFC,name,city);
+    public boolean insert(String[] fields) {
+        return dal.insert(fields);
     }
 
     public String[] consult(String RFC) {
         return dal.consult(RFC);
     }
 
-    public boolean update(String RFC, String name, String city) {
-        return dal.update(RFC,name,city);
+    public boolean update(String[] fields) {
+        return dal.update(fields);
     }
 
     public boolean delete(String RFC) {
