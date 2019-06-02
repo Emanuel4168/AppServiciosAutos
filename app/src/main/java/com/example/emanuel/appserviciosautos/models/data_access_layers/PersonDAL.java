@@ -52,7 +52,7 @@ public class PersonDAL implements SQLiteModel {
     }
 
     @Override
-    public void updeate(String RFC, String name, String city){
+    public void update(String RFC, String name, String city){
         String update="Update "+DataBaseConstants.PERSONS_TABLE+" set "+DataBaseConstants.PERSONS_RFC+"='"+RFC+
                 "', "+DataBaseConstants.PERSONS_NAME+"='"+name+"', "+DataBaseConstants.PERSONS_CITY+"='"+city
                 +"' where "+DataBaseConstants.PERSONS_RFC+"Like"+"'"+RFC+"'";

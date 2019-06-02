@@ -4,9 +4,9 @@ import android.database.Cursor;
 
 public interface SQLiteModel {
 
-    public void insert();
-    public String[] consult();
-    public void update();
-    public void delete();
-    public String getCurrentError();
+    void insert(String RFC, String name, String city);
+    String[] consult(String RFC);
+    void update(String RFC, String name, String city);
+    void delete();
+    String getCurrentError();
 }
