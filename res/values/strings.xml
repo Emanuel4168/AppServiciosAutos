@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AppServiciosAutos</string>
+    <string name="lblmsg1_text"> Dar de Alta: </string>
+    <string name="lblmsg2"> Consultas: </string>
+
+    <string name="txt_rfc_hint">RFC:</string>
+    <string name="txt_name_hint">Nombre:</string>
+    <string name="txt_city_hint">Ciudad:</string>
+    <string name="btn_submit_text"> Guardar </string>
+    <string name="btn_update_text"> Modificar </string>
+
+    <string name="txt_plate_hint"> Placas: </string>
+    <string name="txt_trademark_hint"> Marca: </string>
+    <string name="txt_model_hint"> Modelo:</string>
+    <string name="txt_year_text"> Año: </string>
+
+    <string name="txt_id_hint"> ID: </string>
+    <string name="btn_remove_text"> Dar de Baja </string>
+
+</resources>
