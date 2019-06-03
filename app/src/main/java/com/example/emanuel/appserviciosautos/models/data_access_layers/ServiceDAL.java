@@ -17,11 +17,11 @@ public class ServiceDAL {
     public ServiceDAL(Context context) {
         this.context = context;
         connection = new SQLiteConnection(context, DataBaseConstants.DB_NAME, null, 1);
-        dataBase = connection.getWritableDatabase();
         errorDefault = "No fue posible realizar la operación, es probable que no exista un servicio con ese número de orden";
     }
 
     public boolean insert(String[] fields) {
+        connection.getWritableDatabase();
         String insert = "INSERT INTO " + DataBaseConstants.SERVICES_TABLE + " VALUES ( '" + fields[0] + "', '" + fields[1] + "', '" + fields[2] + "', " + fields[3] + fields[4] + fields[5];
         try {
             dataBase.execSQL(insert);
@@ -30,10 +30,13 @@ public class ServiceDAL {
         } catch (Exception e) {
             error = "No fue posible realizar la operación, es probable que ya exista un servicio con ese número de orden";
             return false;
+        }finally {
+            dataBase.close();
         }
     }
 
     public String[] consult(String order) {
+        connection.getWritableDatabase();
         String consult = "SELECT * FROM " + DataBaseConstants.SERVICES_TABLE + " where " + DataBaseConstants.SERVICE_ORDER + "= " + order;
         try {
             Cursor c = dataBase.rawQuery(consult, null);
@@ -49,10 +52,13 @@ public class ServiceDAL {
         } catch (Exception e) {
             error = errorDefault;
             return null;
+        }finally {
+            dataBase.close();
         }
     }
 
     public boolean update(String[] fields){
+        connection.getWritableDatabase();
         String update="Update "+DataBaseConstants.SERVICES_TABLE+" set "+DataBaseConstants.SERVICE_ORDER+"='"+fields[0]+
                 "', "+DataBaseConstants.SERVICE_KILOMETERS+"='"+fields[3]+"', "+DataBaseConstants.SERVICE_PRICE+"='"+fields[4]
                 + DataBaseConstants.SERVICE_DATE+"='"+fields[5]+"', "
@@ -68,6 +74,8 @@ public class ServiceDAL {
         }catch (Exception e){
             error = errorDefault;
             return false;
+        }finally {
+            dataBase.close();
         }
     }
 

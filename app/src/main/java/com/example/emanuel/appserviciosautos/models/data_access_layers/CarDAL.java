@@ -17,11 +17,11 @@ public class CarDAL {
     public CarDAL(Context context) {
         this.context = context;
         connection = new SQLiteConnection(context, DataBaseConstants.DB_NAME, null, 1);
-        dataBase = connection.getWritableDatabase();
         errorDefault = "No fue posible realizar la operación, es probable que no exista un carro con esa placa";
     }
 
     public boolean insert(String[] fields) {
+        connection.getWritableDatabase();
         String insert = "INSERT INTO " + DataBaseConstants.CARS_TABLE + " VALUES ( '" + fields[0] + "', '" + fields[1] + "', '" + fields[2] + "', " + fields[3] + ")" + "1)";
         try {
             dataBase.execSQL(insert);
@@ -30,10 +30,13 @@ public class CarDAL {
         } catch (Exception e) {
             error = "No fue posible realizar la operación, es probable que ya exista un carro con esa placa";
             return false;
+        }finally {
+            dataBase.close();
         }
     }
 
     public String[] consult(String plate) {
+        connection.getWritableDatabase();
         String consult = "SELECT * FROM " + DataBaseConstants.CARS_TABLE + " where " + DataBaseConstants.CARS_PLATE + "= " + plate;
         try {
             Cursor c = dataBase.rawQuery(consult, null);
@@ -53,10 +56,13 @@ public class CarDAL {
         } catch (Exception e) {
             error = errorDefault;
             return null;
+        }finally {
+            dataBase.close();
         }
     }
 
     public boolean update(String[] fields){
+        connection.getWritableDatabase();
         String update="Update "+DataBaseConstants.CARS_TABLE+" set "+DataBaseConstants.CARS_PLATE+"='"+fields[0]+
                 "', "+DataBaseConstants.CARS_TRADEMARK+"='"+fields[1]+"', "+DataBaseConstants.CARS_MODEL+"='"+fields[2]
                 + DataBaseConstants.CARS_YEAR+"='"+fields[3]+"', "
@@ -72,10 +78,13 @@ public class CarDAL {
         }catch (Exception e){
             error = errorDefault;
             return false;
+        }finally {
+            dataBase.close();
         }
     }
 
     public boolean delete(String plate){
+        connection.getWritableDatabase();
         String delete="Update "+DataBaseConstants.CARS_TABLE+" set "+ DataBaseConstants.CARS_STATUS+"= 0 " +
                 "where "+DataBaseConstants.CARS_PLATE+" like '"+plate+"'";
         try{
@@ -85,6 +94,8 @@ public class CarDAL {
         }catch (Exception e){
             error = errorDefault;
             return false;
+        }finally {
+            dataBase.close();
         }
     }
 
