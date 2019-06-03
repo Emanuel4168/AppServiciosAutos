@@ -8,14 +8,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.emanuel.appserviciosautos.models.PersonModel;
+import com.example.emanuel.appserviciosautos.utils.RegexConstants;
 
 public class RegistryActivity extends AppCompatActivity implements View.OnClickListener{
 
     private TextView txtRFC, txtName,txtCity;
     private Button btnInsert, btnUpdate;
-    private final static String RFC_REGEX ="";
-    private final static String NAME_REGEX ="";
-    private final static String CITY_REGEX ="";
+
     private PersonModel model;
 
     @Override
@@ -67,15 +66,15 @@ public class RegistryActivity extends AppCompatActivity implements View.OnClickL
 
     private boolean validate(){
         boolean res = true;
-        if(!txtRFC.getText().toString().matches(RFC_REGEX)){
+        if(!txtRFC.getText().toString().matches(RegexConstants.RFC_REGEX)){
             txtRFC.setError("El RFC parece ser incorrecto");
             res = false;
         }
-        if(!txtName.getText().toString().matches(NAME_REGEX)){
+        if(!txtName.getText().toString().matches(RegexConstants.NAME_REGEX)){
             txtRFC.setError("El nombre parece ser incorrecto");
             res = false;
         }
-        if(!txtCity.getText().toString().matches(CITY_REGEX)){
+        if(!txtCity.getText().toString().matches(RegexConstants.CITY_REGEX)){
             txtRFC.setError("la ciudad parece ser incorrecto");
             res = false;
         }
