@@ -23,6 +23,10 @@ public class SelectActivity extends AppCompatActivity implements View.OnClickLis
         type = intent.getIntExtra("type",0);
         this.btnInsert = findViewById(R.id.btnInsert);
         this.btnRemove = findViewById(R.id.btnRemove);
+
+        btnInsert.setOnClickListener(this);
+        btnRemove.setOnClickListener(this);
+
         imgLogo= findViewById(R.id.imgLogo);
         if(type == 1)
             imgLogo.setImageResource(R.drawable.car_icon);
@@ -33,20 +37,23 @@ public class SelectActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        Intent intent;
+        Intent intent = null;
         if(view == btnInsert){
             if(type == 0)
                 intent = new Intent(this,RegistryActivity.class);
             if(type == 1)
-                intent = new Intent(this,RegistryActivity.class);
+                intent = new Intent(this,CarRegistryActivity.class);
             if(type == 2)
-                intent = new Intent(this,RegistryActivity.class);
+                intent = new Intent(this,ServicesRegistryActivity.class);
+
+            startActivity(intent);
 
             return;
         }
         if(view == btnRemove){
             intent = new Intent(this,RemoveActivity.class);
             intent.putExtra("type",type);
+            startActivity(intent);
             return;
         }
     }
