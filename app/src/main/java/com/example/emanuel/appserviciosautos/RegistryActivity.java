@@ -1,6 +1,5 @@
 package com.example.emanuel.appserviciosautos;
 
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +21,7 @@ public class RegistryActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registry);
 
-        txtRFC = findViewById(R.id.txtRFC);
+        txtRFC = findViewById(R.id.txtRFCService);
         txtName = findViewById(R.id.txtName);
         txtCity = findViewById(R.id.txtCity);
         btnInsert = findViewById(R.id.btnInsert);

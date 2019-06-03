@@ -35,7 +35,7 @@
         tools:layout_editor_absoluteY="213dp" />
 
     <EditText
-        android:id="@+id/txtPlate"
+        android:id="@+id/txtPlateService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -45,7 +45,7 @@
         tools:layout_editor_absoluteY="283dp" />
 
     <EditText
-        android:id="@+id/txtRFC"
+        android:id="@+id/txtRFCService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
