@@ -9,9 +9,9 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="101dp"
         app:srcCompat="@drawable/services_icon"
-        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteX="156dp"
         tools:layout_editor_absoluteY="67dp" />
 
     <EditText
@@ -21,8 +21,8 @@
         android:ems="10"
         android:hint="Fecha:"
         android:inputType="date"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="588dp" />
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="589dp" />
 
     <EditText
         android:id="@+id/txtOrder"
@@ -31,8 +31,8 @@
         android:ems="10"
         android:hint="Orden:"
         android:inputType="number"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="212dp" />
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="213dp" />
 
     <EditText
         android:id="@+id/txtPlate"
@@ -41,8 +41,8 @@
         android:ems="10"
         android:hint="Placa:"
         android:inputType="text"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="282dp" />
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="283dp" />
 
     <EditText
         android:id="@+id/txtRFC"
@@ -51,8 +51,8 @@
         android:ems="10"
         android:hint="RFC:"
         android:inputType="text"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="357dp" />
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="358dp" />
 
     <EditText
         android:id="@+id/txtKm"
@@ -61,8 +61,8 @@
         android:ems="10"
         android:hint="Kilometraje:"
         android:inputType="number"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="436dp" />
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="437dp" />
 
     <EditText
         android:id="@+id/txtPrice"
@@ -71,7 +71,7 @@
         android:ems="10"
         android:hint="Precio:"
         android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="512dp" />
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="513dp" />
 
 </android.support.constraint.ConstraintLayout>

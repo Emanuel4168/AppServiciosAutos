@@ -61,6 +61,11 @@ public class PersonDAL {
                 "', "+DataBaseConstants.PERSONS_NAME+"='"+fields[1]+"', "+DataBaseConstants.PERSONS_CITY+"='"+fields[2]
                 +"' where "+DataBaseConstants.PERSONS_RFC+"Like"+"'"+fields[0]+"'";
         try{
+            String[] person = this.consult(fields[0]);
+            if(person == null){
+                return false;
+            }
+
             dataBase.execSQL(update);
             error = "";
             return true;

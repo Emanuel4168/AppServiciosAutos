@@ -62,6 +62,10 @@ public class CarDAL {
                 + DataBaseConstants.CARS_YEAR+"='"+fields[3]+"', "
                 +"' where "+DataBaseConstants.CARS_PLATE+"Like"+"'"+fields[0]+"'";
         try{
+            String[] car = consult(fields[0]);
+            if(car == null){
+                return false;
+            }
             dataBase.execSQL(update);
             error = "";
             return true;

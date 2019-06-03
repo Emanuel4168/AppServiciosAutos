@@ -58,6 +58,10 @@ public class ServiceDAL {
                 + DataBaseConstants.SERVICE_DATE+"='"+fields[5]+"', "
                 +"' where "+DataBaseConstants.SERVICE_ORDER+"Like"+"'"+fields[0]+"'";
         try{
+            String[] service = consult(fields[0]);
+            if(service == null){
+                return false;
+            }
             dataBase.execSQL(update);
             error = "";
             return true;
