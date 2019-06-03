@@ -1,6 +1,7 @@
 package com.example.emanuel.appserviciosautos;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button btnPerson,btnCar,btnService,btnQuerry;
+    private FloatingActionButton btnPerson,btnCar,btnService,btnQuerry;
     private Intent intent;
 
     @Override
@@ -20,6 +21,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.btnCar = findViewById(R.id.btnCar);
         this.btnService = findViewById(R.id.btnService);
         this.btnQuerry = findViewById(R.id.btnQuerry);
+
+        btnPerson.setOnClickListener(this);
+        btnCar.setOnClickListener(this);
+        btnService.setOnClickListener(this);
+        btnQuerry.setOnClickListener(this);
     }
 
     @Override
