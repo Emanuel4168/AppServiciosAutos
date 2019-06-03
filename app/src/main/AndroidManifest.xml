@@ -19,7 +19,8 @@
         <activity android:name=".RegistryActivity" />
         <activity android:name=".RemoveActivity" />
         <activity android:name=".SelectActivity" />
-        <activity android:name=".CarRegistryActivity"></activity>
+        <activity android:name=".CarRegistryActivity" />
+        <activity android:name=".models.data_access_layers.ServiceRegistryActivity"></activity>
     </application>
 
 </manifest>
