@@ -1,9 +1,11 @@
 package com.example.emanuel.appserviciosautos.models;
 
 import android.content.Context;
+
+import com.example.emanuel.appserviciosautos.models.data_access_layers.SQLiteModel;
 import com.example.emanuel.appserviciosautos.models.data_access_layers.ServiceDAL;
 
-public class ServiceModel {
+public class ServiceModel implements SQLiteModel {
     private ServiceDAL dal;
 
     public ServiceModel(Context context){
@@ -20,6 +22,11 @@ public class ServiceModel {
 
     public boolean update(String[] fields){
         return dal.update(fields);
+    }
+
+    @Override
+    public boolean delete(String id) {
+        return false;
     }
 
     public String getCurrentError() {

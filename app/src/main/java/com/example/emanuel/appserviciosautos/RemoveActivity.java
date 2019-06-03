@@ -8,7 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.example.emanuel.appserviciosautos.models.CarModel;
 import com.example.emanuel.appserviciosautos.models.PersonModel;
+import com.example.emanuel.appserviciosautos.models.ServiceModel;
 import com.example.emanuel.appserviciosautos.models.data_access_layers.SQLiteModel;
 
 public class RemoveActivity extends AppCompatActivity implements View.OnClickListener{
@@ -35,14 +37,15 @@ public class RemoveActivity extends AppCompatActivity implements View.OnClickLis
         txtID.setHint("RFC:");
         if(type == 1) {
             imgLogo.setImageResource(R.drawable.car_icon);
-            model = null; // Por Corregir
+            model = new CarModel(this);
             txtID.setHint("Placas:");
         }
         if(type == 2) {
             imgLogo.setImageResource(R.drawable.services_icon);
-            model = null; // Por Corregir
+            model = new ServiceModel(this);
             txtID.setHint("No. de Servicio:");
         }
+        btnRemove2.setOnClickListener(this);
 
     }
 
