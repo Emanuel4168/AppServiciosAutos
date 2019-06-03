@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServicesRegistryActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/services_icon"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <EditText
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Fecha:"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="588dp" />
+
+    <EditText
+        android:id="@+id/txtOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Orden:"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="212dp" />
+
+    <EditText
+        android:id="@+id/txtPlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Placa:"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="282dp" />
+
+    <EditText
+        android:id="@+id/txtRFC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="RFC:"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="357dp" />
+
+    <EditText
+        android:id="@+id/txtKm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Kilometraje:"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="436dp" />
+
+    <EditText
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Precio:"
+        android:inputType="numberDecimal"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="512dp" />
+
+</android.support.constraint.ConstraintLayout>
