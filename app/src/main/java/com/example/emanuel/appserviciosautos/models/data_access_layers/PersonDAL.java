@@ -18,7 +18,7 @@ public class PersonDAL {
         this.context = context;
         connection = new SQLiteConnection(context, DataBaseConstants.DB_NAME, null, 1);
         dataBase = connection.getWritableDatabase();
-        errorDefault = "No fué posible realizar la operación, es probable que ya exista alguien con ese RFC";
+        errorDefault = "No fue posible realizar la operación, es probable que no exista alguien con ese RFC";
     }
 
     public boolean insert(String[] fields) {
@@ -28,7 +28,7 @@ public class PersonDAL {
             error = "";
             return true;
         } catch (Exception e) {
-            error = errorDefault;
+            error = "No fue posible realizar la operación, es probable que ya exista alguien con ese RFC";
             return false;
         }
     }

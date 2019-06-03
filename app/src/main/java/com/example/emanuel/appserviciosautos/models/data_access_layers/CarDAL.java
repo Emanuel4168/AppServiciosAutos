@@ -18,7 +18,7 @@ public class CarDAL {
         this.context = context;
         connection = new SQLiteConnection(context, DataBaseConstants.DB_NAME, null, 1);
         dataBase = connection.getWritableDatabase();
-        errorDefault = "No fué posible realizar la operación, es probable que ya exista un carro con esa placa";
+        errorDefault = "No fue posible realizar la operación, es probable que no exista un carro con esa placa";
     }
 
     public boolean insert(String[] fields) {
@@ -28,7 +28,7 @@ public class CarDAL {
             error = "";
             return true;
         } catch (Exception e) {
-            error = errorDefault;
+            error = "No fue posible realizar la operación, es probable que ya exista un carro con esa placa";
             return false;
         }
     }
