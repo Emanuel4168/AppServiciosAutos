@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
         if(view == this.btnQuerry){
-
+            intent = new Intent(this,QuerryActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             return;
         }
 
