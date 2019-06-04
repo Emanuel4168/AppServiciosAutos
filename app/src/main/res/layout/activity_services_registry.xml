@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C8C3F0"
     tools:context=".ServicesRegistryActivity">
 
     <ImageView
@@ -116,28 +117,33 @@
 
     <LinearLayout
         android:id="@+id/linearLayout6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
         android:layout_marginStart="133dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="132dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <Button
             android:id="@+id/btnInsertService"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_submit_text" />
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:background="#673AB7"
+            android:text="@string/btn_submit_text"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btnUpdateService"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:text="@string/btn_update_text" />
+            android:background="#3F51B5"
+            android:text="@string/btn_update_text"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

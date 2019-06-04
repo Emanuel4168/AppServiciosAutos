@@ -4,42 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B1D8F7"
     tools:context=".SelectActivity">
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="167dp"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
         android:layout_marginStart="167dp"
         android:layout_marginTop="128dp"
+        android:layout_marginEnd="167dp"
+        android:layout_marginBottom="54dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user_burned" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="142dp"
-        android:layout_marginStart="142dp"
-        android:layout_marginTop="32dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/linearLayout10"
+        android:layout_width="410dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="264dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/imgLogo"
         app:layout_constraintTop_toBottomOf="@+id/imgLogo">
 
         <Button
             android:id="@+id/btnInsert"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/lblmsg1_text" />
+            android:layout_width="205dp"
+            android:layout_height="100dp"
+            android:background="#03A9F4"
+            android:text="Dar de Alta" />
 
         <Button
             android:id="@+id/btnRemove"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/lblmsg2" />
+            android:layout_width="205dp"
+            android:layout_height="100dp"
+            android:background="#3F51B5"
+            android:text="Dar de Baja" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
