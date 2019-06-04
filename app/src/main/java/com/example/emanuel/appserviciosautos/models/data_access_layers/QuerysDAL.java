@@ -26,7 +26,7 @@ public class QuerysDAL {
             Cursor c = dataBase.rawQuery(query,null);
             while(c.moveToNext()){
                 String[] fields = {c.getFloat(0)+"",c.getFloat(1)+"",c.getFloat(2)+"",c.getFloat(3)+""};
-                res.add(new QueryItem(fields));
+                res.add(new QueryItem(fields,2));
             }
             return res;
         }catch (Exception e){
@@ -46,7 +46,7 @@ public class QuerysDAL {
             Cursor c = dataBase.rawQuery(query,null);
             while(c.moveToNext()){
                 String[] fields = {c.getString(0),c.getString(1),c.getString(2),""};
-                res.add(new QueryItem(fields));
+                res.add(new QueryItem(fields,0));
             }
             return res;
 
@@ -68,7 +68,7 @@ public class QuerysDAL {
             Cursor c = dataBase.rawQuery(query,null);
             while(c.moveToNext()){
                 String[] fields = {c.getString(0),c.getString(1),c.getString(1),c.getInt(2)+""};
-                res.add(new QueryItem(fields));
+                res.add(new QueryItem(fields,2));
             }
             return res;
         }catch (Exception e){

@@ -33,6 +33,7 @@ public class QueryAdapter extends RecyclerView.Adapter<QueryAdapter.QueryItemHol
         holder.fields[1].setText(list.get(position).getFields(1));
         holder.fields[2].setText(list.get(position).getFields(2));
         holder.fields[3].setText(list.get(position).getFields(3));
+        holder.setImage(list.get(position).getType());
     }
 
     @Override
@@ -53,6 +54,22 @@ public class QueryAdapter extends RecyclerView.Adapter<QueryAdapter.QueryItemHol
             fields[2] = itemView.findViewById(R.id.lblField3);
             fields[3] = itemView.findViewById(R.id.lblField4);
             imgItem = itemView.findViewById(R.id.imgItem);
+
+        }
+
+        public void setImage(int imageIndex){
+            if(imageIndex == 0){
+                imgItem.setImageResource(R.drawable.user_burned);
+                return;
+            }
+            if(imageIndex == 1){
+                imgItem.setImageResource(R.drawable.car_icon);
+                return;
+            }
+            if(imageIndex == 2){
+                imgItem.setImageResource(R.drawable.services_icon);
+                return;
+            }
 
         }
     }
