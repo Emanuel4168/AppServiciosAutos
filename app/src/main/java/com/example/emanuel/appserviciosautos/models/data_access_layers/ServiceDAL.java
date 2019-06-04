@@ -21,7 +21,7 @@ public class ServiceDAL {
     }
 
     public boolean insert(String[] fields) {
-        connection.getWritableDatabase();
+        dataBase = connection.getWritableDatabase();
         String insert = "INSERT INTO " + DataBaseConstants.SERVICES_TABLE + " VALUES ( '" + fields[0] + "', '" + fields[1] + "', '" + fields[2] + "', " + fields[3] + fields[4] + fields[5];
         try {
             dataBase.execSQL(insert);
@@ -36,7 +36,7 @@ public class ServiceDAL {
     }
 
     public String[] consult(String order) {
-        connection.getWritableDatabase();
+        dataBase = connection.getWritableDatabase();
         String consult = "SELECT * FROM " + DataBaseConstants.SERVICES_TABLE + " where " + DataBaseConstants.SERVICE_ORDER + "= " + order;
         try {
             Cursor c = dataBase.rawQuery(consult, null);
@@ -58,7 +58,7 @@ public class ServiceDAL {
     }
 
     public boolean update(String[] fields){
-        connection.getWritableDatabase();
+        dataBase = connection.getWritableDatabase();
         String update="Update "+DataBaseConstants.SERVICES_TABLE+" set "+DataBaseConstants.SERVICE_ORDER+"='"+fields[0]+
                 "', "+DataBaseConstants.SERVICE_KILOMETERS+"='"+fields[3]+"', "+DataBaseConstants.SERVICE_PRICE+"='"+fields[4]
                 + DataBaseConstants.SERVICE_DATE+"='"+fields[5]+"', "

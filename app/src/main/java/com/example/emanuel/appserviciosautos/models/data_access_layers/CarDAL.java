@@ -21,7 +21,7 @@ public class CarDAL {
     }
 
     public boolean insert(String[] fields) {
-        connection.getWritableDatabase();
+        dataBase = connection.getWritableDatabase();
         String insert = "INSERT INTO " + DataBaseConstants.CARS_TABLE + " VALUES ( '" + fields[0] + "', '" + fields[1] + "', '" + fields[2] + "', " + fields[3] + ")" + "1)";
         try {
             dataBase.execSQL(insert);
@@ -36,7 +36,7 @@ public class CarDAL {
     }
 
     public String[] consult(String plate) {
-        connection.getWritableDatabase();
+        dataBase = connection.getWritableDatabase();
         String consult = "SELECT * FROM " + DataBaseConstants.CARS_TABLE + " where " + DataBaseConstants.CARS_PLATE + "= " + plate;
         try {
             Cursor c = dataBase.rawQuery(consult, null);
@@ -62,7 +62,7 @@ public class CarDAL {
     }
 
     public boolean update(String[] fields){
-        connection.getWritableDatabase();
+        dataBase = connection.getWritableDatabase();
         String update="Update "+DataBaseConstants.CARS_TABLE+" set "+DataBaseConstants.CARS_PLATE+"='"+fields[0]+
                 "', "+DataBaseConstants.CARS_TRADEMARK+"='"+fields[1]+"', "+DataBaseConstants.CARS_MODEL+"='"+fields[2]
                 + DataBaseConstants.CARS_YEAR+"='"+fields[3]+"', "
@@ -84,7 +84,7 @@ public class CarDAL {
     }
 
     public boolean delete(String plate){
-        connection.getWritableDatabase();
+        dataBase = connection.getWritableDatabase();
         String delete="Update "+DataBaseConstants.CARS_TABLE+" set "+ DataBaseConstants.CARS_STATUS+"= 0 " +
                 "where "+DataBaseConstants.CARS_PLATE+" like '"+plate+"'";
         try{
