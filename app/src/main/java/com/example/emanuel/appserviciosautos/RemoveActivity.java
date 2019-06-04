@@ -74,4 +74,9 @@ public class RemoveActivity extends AppCompatActivity implements View.OnClickLis
     private void showError(){
 
     }
+
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 }

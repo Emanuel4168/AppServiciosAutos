@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ServicesRegistryActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +20,7 @@
         <activity android:name=".RemoveActivity" />
         <activity android:name=".SelectActivity" />
         <activity android:name=".CarRegistryActivity" />
+        <activity android:name=".ServicesRegistryActivity"/>
     </application>
 
 </manifest>
