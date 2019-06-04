@@ -37,10 +37,11 @@ public class QuerysDAL {
         }
     }
 
-    public LinkedList<QueryItem> servicesYearCityTrademark(){
+    public LinkedList<QueryItem> personsWithoutService(){
         dataBase = connection.getWritableDatabase();
         LinkedList<QueryItem> res = new LinkedList<QueryItem>();
-        String query = "select PERSONS.rfc,name,city from PERSONS P left join SERVICES S on(P.rfc = S.rfc) where P.rfc is null";
+        String query; //= "select PERSONS.rfc,name,city from PERSONS P left join SERVICES S on(P.rfc = S.rfc) where P.rfc is not null";
+        query = "select PERSONS.rfc,name,city from PERSONS P where rfc not in (select rfc from SERVICES)";
         try{
             Cursor c = dataBase.rawQuery(query,null);
             while(c.moveToNext()){
@@ -57,7 +58,7 @@ public class QuerysDAL {
         }
     }
 
-    public LinkedList<QueryItem> personsWithoutService(){
+    public LinkedList<QueryItem> servicesYearCityTrademark(){
         dataBase = connection.getWritableDatabase();
         LinkedList<QueryItem> res = new LinkedList<QueryItem>();
         String query = "Select substr(date,1,4) as year, city, trademark, count(*) as nServices" +
