@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.example.emanuel.appserviciosautos.models.PersonModel;
 import com.example.emanuel.appserviciosautos.utils.RegexConstants;
+import com.example.emanuel.appserviciosautos.utils.Routines;
 
 public class RegistryActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -43,20 +44,22 @@ public class RegistryActivity extends AppCompatActivity implements View.OnClickL
         if(view == btnInsert){
             if(!model.insert(data)){
                 //fallo
-
+                Routines.showNotificationMessage(this,"OOPS!",model.getCurrentError());
                 return;
             }
             //exito
+            Routines.showNotificationMessage(this,"CORRECTO!","Bienvenido "+txtName.getText().toString()+"!");
             return;
         }
 
         if(view == btnUpdate){
             if(!model.update(data)){
                 //fallo
-
+                Routines.showNotificationMessage(this,"OOPS!",model.getCurrentError());
                 return;
             }
             //exito
+            Routines.showNotificationMessage(this,"CORRECTO!","Modificación correcta!");
             return;
 
         }

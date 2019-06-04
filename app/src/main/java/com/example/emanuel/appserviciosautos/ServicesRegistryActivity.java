@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 import com.example.emanuel.appserviciosautos.models.ServiceModel;
 import com.example.emanuel.appserviciosautos.utils.RegexConstants;
+import com.example.emanuel.appserviciosautos.utils.Routines;
 
 public class ServicesRegistryActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -48,17 +49,21 @@ public class ServicesRegistryActivity extends AppCompatActivity implements View.
         if(view == btnInsertService){
             if(!model.insert(car)){
                 //error
+                Routines.showNotificationMessage(this,"OOPS!",model.getCurrentError());
                 return;
             }
             //exito
+            Routines.showNotificationMessage(this,"CORRECTO!","El nuevo servicio está listo");
             return;
         }
         if(view == btnUpdateService){
             if(!model.update(car)){
                 //error
+                Routines.showNotificationMessage(this,"OOPS!",model.getCurrentError());
                 return;
             }
             //exito
+            Routines.showNotificationMessage(this,"CORRECTO!","Modificación exitosa");
             return;
         }
 

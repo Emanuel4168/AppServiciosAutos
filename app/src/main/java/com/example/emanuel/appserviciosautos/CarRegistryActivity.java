@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 import com.example.emanuel.appserviciosautos.models.CarModel;
 import com.example.emanuel.appserviciosautos.utils.RegexConstants;
+import com.example.emanuel.appserviciosautos.utils.Routines;
 
 public class CarRegistryActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -45,17 +46,21 @@ public class CarRegistryActivity extends AppCompatActivity implements View.OnCli
         if(view == btnInsertCar){
             if(!model.insert(car)){
                 //error
+                Routines.showNotificationMessage(this,"OOPS!",model.getCurrentError());
                 return;
             }
             //exito
+            Routines.showNotificationMessage(this,"CORRECTO!","Ahora el auto está registrado");
             return;
         }
         if(view == btnUpdateCar){
             if(!model.update(car)){
                 //error
+                Routines.showNotificationMessage(this,"OOPS!",model.getCurrentError());
                 return;
             }
             //exito
+            Routines.showNotificationMessage(this,"CORRECTO!","Información actualizada");
             return;
         }
 
