@@ -11,6 +11,9 @@ public class RegexConstants {
     public final static String MODEL_REGEX = "[A-Za-z]{3,14}";
     public final static String YEAR_REGEX = "[1-2]{1}[0-9]{3}";
 
+    public final static String ORDER_REGEX = "";
+    public final static String KM_REGEX = "";
+    public final static String PRICE_REGEX= "";
     public final static String DATE_REGEX = "";
 
 }
