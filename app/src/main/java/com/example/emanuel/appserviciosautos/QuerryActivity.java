@@ -1,6 +1,7 @@
 package com.example.emanuel.appserviciosautos;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,15 +34,21 @@ public class QuerryActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         Intent intent = null;
-        if(view == btnIngresos || view == btnIngresos2)
-            intent = new Intent(this, CarRegistryActivity.class);
-        if(view == btnServicios || view == btnServicios2)
-            intent = new Intent(this, CarRegistryActivity.class);
-        if(view == btnPersonas || view == btnPersonas2)
-            intent = new Intent(this, CarRegistryActivity.class);
+        intent = new Intent(this, QueryActivityRV.class);
+        if(view == btnIngresos || view == btnIngresos2) {
+            intent.putExtra("type",0);
+        }
+        if(view == btnServicios || view == btnServicios2) {
+            intent.putExtra("type",1);
+        }
+        if(view == btnPersonas || view == btnPersonas2) {
+            intent.putExtra("type",2);
+        }
 
         startActivity(intent);
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ECLAIR) {
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }
     }
 
     @Override
