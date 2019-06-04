@@ -47,6 +47,7 @@ public class SelectActivity extends AppCompatActivity implements View.OnClickLis
                 intent = new Intent(this,ServicesRegistryActivity.class);
 
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
             return;
         }
@@ -54,7 +55,14 @@ public class SelectActivity extends AppCompatActivity implements View.OnClickLis
             intent = new Intent(this,RemoveActivity.class);
             intent.putExtra("type",type);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             return;
         }
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

@@ -11,9 +11,10 @@
         android:layout_width="100dp"
         android:layout_height="101dp"
         android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/services_icon"
-        tools:layout_editor_absoluteX="156dp" />
+        app:srcCompat="@drawable/services_icon" />
 
     <LinearLayout
         android:id="@+id/linearLayout5"
@@ -114,6 +115,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="133dp"

@@ -54,5 +54,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         intent = new Intent(this, SelectActivity.class);
         intent.putExtra("type",value);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 }
