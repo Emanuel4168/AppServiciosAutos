@@ -51,23 +51,23 @@ public class ServicesRegistryActivity extends AppCompatActivity implements View.
         if(view == btnInsertService){
             if(!model.insert(car)){
                 //error
-                Routines.showNotificationMessage(this,"OOPS!",model.getCurrentError());
+                Routines.showNotificationMessage(this,"¡OOPS!",model.getCurrentError());
                 return;
             }
 
             if(carModel.consult(car[1])==null){
-                Routines.showNotificationMessage(this,"OOPS!","No existe el auto");
+                Routines.showNotificationMessage(this,"¡OOPS!","No existe el auto.");
                 return;
             }
 
             if(personModel.consult(car[2])==null){
-                Routines.showNotificationMessage(this,"OOPS!","No existe la persona");
+                Routines.showNotificationMessage(this,"¡OOPS!","No existe la persona.");
                 return;
             }
 
             //exito
             clean();
-            Routines.showNotificationMessage(this,"CORRECTO!","El servicio está registrado");
+            Routines.showNotificationMessage(this,"¡CORRECTO!","El servicio está registrado.");
             return;
         }
         if(view == btnUpdateService){
@@ -78,7 +78,7 @@ public class ServicesRegistryActivity extends AppCompatActivity implements View.
             }
             //exito
             clean();
-            Routines.showNotificationMessage(this,"CORRECTO!","Modificación exitosa");
+            Routines.showNotificationMessage(this,"CORRECTO!","Modificación exitosa.");
             return;
         }
 
@@ -87,27 +87,27 @@ public class ServicesRegistryActivity extends AppCompatActivity implements View.
     private boolean validate(){
         boolean res = true;
         if(!txtOrder.getText().toString().matches(RegexConstants.ORDER_REGEX)){
-            txtOrder.setError("La orden no parece ser correcta");
+            txtOrder.setError("La orden no parece ser correcta.");
             res = false;
         }
         if(!txtPlateService.getText().toString().matches(RegexConstants.PLATE_REGEX)){
-            txtPlateService.setError("La placa no parece ser correcta");
+            txtPlateService.setError("La placa no parece ser correcta.");
             res = false;
         }
         if(!txtRFCService.getText().toString().matches(RegexConstants.RFC_REGEX)){
-            txtRFCService.setError("El RFC no parece ser correcto");
+            txtRFCService.setError("El RFC no parece ser correcto.");
             res = false;
         }
         if(!txtKm.getText().toString().matches(RegexConstants.KM_REGEX)){
-            txtKm.setError("El kilometrajeno parece ser correcta");
+            txtKm.setError("El kilometrajeno parece ser correcta.");
             res = false;
         }
         if(!txtPrice.getText().toString().matches(RegexConstants.PRICE_REGEX)){
-            txtPrice.setError("El precio no parece ser correcto");
+            txtPrice.setError("El precio no parece ser correcto.");
             res = false;
         }
         if(!txtDate.getText().toString().matches(RegexConstants.DATE_REGEX)){
-            txtDate.setError("La fecha no parece ser correcta");
+            txtDate.setError("La fecha no parece ser correcta.");
             res = false;
         }
 
