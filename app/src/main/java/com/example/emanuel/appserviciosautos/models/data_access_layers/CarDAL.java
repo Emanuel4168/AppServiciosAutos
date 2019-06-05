@@ -22,7 +22,7 @@ public class CarDAL {
 
     public boolean insert(String[] fields) {
         dataBase = connection.getWritableDatabase();
-        String insert = "INSERT INTO " + DataBaseConstants.CARS_TABLE + " VALUES ( '" + fields[0] + "', '" + fields[1] + "', '" + fields[2] + "', " + fields[3] + ")" + "1)";
+        String insert = "INSERT INTO " + DataBaseConstants.CARS_TABLE + " VALUES ( '" + fields[0] + "', '" + fields[1] + "', '" + fields[2] + "', " + fields[3] + " , 1)";
         try {
             dataBase.execSQL(insert);
             error = "";
