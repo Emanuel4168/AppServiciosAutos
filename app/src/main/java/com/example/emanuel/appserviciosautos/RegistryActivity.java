@@ -73,11 +73,11 @@ public class RegistryActivity extends AppCompatActivity implements View.OnClickL
             res = false;
         }
         if(!txtName.getText().toString().matches(RegexConstants.NAME_REGEX)){
-            txtRFC.setError("El nombre parece ser incorrecto");
+            txtName.setError("El nombre parece ser incorrecto");
             res = false;
         }
         if(!txtCity.getText().toString().matches(RegexConstants.CITY_REGEX)){
-            txtRFC.setError("la ciudad parece ser incorrecto");
+            txtCity.setError("la ciudad parece ser incorrecta");
             res = false;
         }
         return res;

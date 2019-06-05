@@ -76,23 +76,23 @@ public class ServicesRegistryActivity extends AppCompatActivity implements View.
             res = false;
         }
         if(!txtPlateService.getText().toString().matches(RegexConstants.PLATE_REGEX)){
-            txtOrder.setError("La placa no parece ser correcta");
+            txtPlateService.setError("La placa no parece ser correcta");
             res = false;
         }
         if(!txtRFCService.getText().toString().matches(RegexConstants.RFC_REGEX)){
-            txtOrder.setError("El RFC no parece ser correcto");
+            txtRFCService.setError("El RFC no parece ser correcto");
             res = false;
         }
         if(!txtKm.getText().toString().matches(RegexConstants.KM_REGEX)){
-            txtOrder.setError("El kilometrajeno parece ser correcta");
+            txtKm.setError("El kilometrajeno parece ser correcta");
             res = false;
         }
         if(!txtPrice.getText().toString().matches(RegexConstants.PRICE_REGEX)){
-            txtOrder.setError("El precio no parece ser correcto");
+            txtPrice.setError("El precio no parece ser correcto");
             res = false;
         }
         if(!txtDate.getText().toString().matches(RegexConstants.DATE_REGEX)){
-            txtOrder.setError("La fecha no parece ser correcta");
+            txtDate.setError("La fecha no parece ser correcta");
             res = false;
         }
 
