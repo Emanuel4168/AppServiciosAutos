@@ -3,7 +3,9 @@ package com.example.emanuel.appserviciosautos;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.example.emanuel.appserviciosautos.models.QueryModel;
 import com.example.emanuel.appserviciosautos.utils.QueryAdapter;
@@ -23,8 +25,12 @@ public class QueryActivityRV extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_query_rv);
 
+        rvQuery = findViewById(R.id.rvQuerry);
+        rvQuery.setLayoutManager(new LinearLayoutManager(this));
+
         Intent intent = getIntent();
         int querryType = intent.getIntExtra("type",0);
+        model = new QueryModel(this);
         if(querryType == 0)
             query = model.revenueByCity();
         if(querryType == 1)

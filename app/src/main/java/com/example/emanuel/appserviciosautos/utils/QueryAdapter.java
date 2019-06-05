@@ -29,9 +29,9 @@ public class QueryAdapter extends RecyclerView.Adapter<QueryAdapter.QueryItemHol
 
     @Override
     public void onBindViewHolder(@NonNull QueryItemHolder holder, int position) {
-        holder.fields[0].setText(list.get(position).getFields(0));
-        holder.fields[1].setText(list.get(position).getFields(1));
-        holder.fields[2].setText(list.get(position).getFields(2));
+        holder.fields[0].setText(list.get(position).getFields(0)+" ");
+        holder.fields[1].setText(list.get(position).getFields(1)+" ");
+        holder.fields[2].setText(list.get(position).getFields(2)+" ");
         holder.fields[3].setText(list.get(position).getFields(3));
         holder.setImage(list.get(position).getType());
     }

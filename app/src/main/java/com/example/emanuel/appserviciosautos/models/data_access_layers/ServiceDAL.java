@@ -27,7 +27,7 @@ public class ServiceDAL {
 
     public boolean insert(String[] fields) {
         dataBase = connection.getWritableDatabase();
-        String insert = "INSERT INTO " + DataBaseConstants.SERVICES_TABLE + " VALUES ( '" + fields[0] + "', '" + fields[1] + "', '" + fields[2] + "', " + fields[3] + fields[4] + fields[5];
+        String insert = "INSERT INTO " + DataBaseConstants.SERVICES_TABLE + " VALUES ( " + fields[0] + ", '" + fields[1] + "', '" + fields[2] + "', " + fields[3]+" , " + fields[4]+", '"+ fields[5]+"')";
 
         //Verificar que el auto exista
         if(carModel.consult(fields[1])==null){

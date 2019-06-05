@@ -37,7 +37,7 @@ public class CarDAL {
 
     public String[] consult(String plate) {
         dataBase = connection.getWritableDatabase();
-        String consult = "SELECT * FROM " + DataBaseConstants.CARS_TABLE + " where " + DataBaseConstants.CARS_PLATE + "= " + plate;
+        String consult = "select * from " + DataBaseConstants.CARS_TABLE + " where " + DataBaseConstants.CARS_PLATE + " like '" + plate+"'";
         try {
             Cursor c = dataBase.rawQuery(consult, null);
             if (c.getCount() == 0) {

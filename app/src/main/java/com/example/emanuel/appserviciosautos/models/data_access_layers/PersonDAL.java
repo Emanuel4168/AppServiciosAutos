@@ -37,7 +37,7 @@ public class PersonDAL {
 
     public String[] consult(String RFC) {
         dataBase = connection.getWritableDatabase();
-        String consult = "SELECT * FROM " + DataBaseConstants.PERSONS_TABLE + " where " + DataBaseConstants.PERSONS_RFC + "= " + RFC;
+        String consult = "SELECT * FROM " + DataBaseConstants.PERSONS_TABLE + " where " + DataBaseConstants.PERSONS_RFC + " like '" + RFC+"'";
         try {
             Cursor c = dataBase.rawQuery(consult, null);
             if (c.getCount() == 0) {
