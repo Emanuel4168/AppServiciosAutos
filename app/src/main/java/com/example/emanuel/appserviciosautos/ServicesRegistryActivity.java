@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.emanuel.appserviciosautos.models.ServiceModel;
+import com.example.emanuel.appserviciosautos.models.*;
 import com.example.emanuel.appserviciosautos.utils.RegexConstants;
 import com.example.emanuel.appserviciosautos.utils.Routines;
 
@@ -15,6 +15,8 @@ public class ServicesRegistryActivity extends AppCompatActivity implements View.
     private EditText txtOrder,txtPlateService,txtRFCService,txtKm,txtPrice,txtDate;
     private Button btnInsertService,btnUpdateService;
     private ServiceModel model;
+    private PersonModel personModel;
+    private CarModel carModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +54,20 @@ public class ServicesRegistryActivity extends AppCompatActivity implements View.
                 Routines.showNotificationMessage(this,"OOPS!",model.getCurrentError());
                 return;
             }
+
+            if(carModel.consult(car[1])==null){
+                Routines.showNotificationMessage(this,"OOPS!","No existe el auto");
+                return;
+            }
+
+            if(personModel.consult(car[2])==null){
+                Routines.showNotificationMessage(this,"OOPS!","No existe la persona");
+                return;
+            }
+
             //exito
             clean();
-            Routines.showNotificationMessage(this,"CORRECTO!","El nuevo servicio está listo");
+            Routines.showNotificationMessage(this,"CORRECTO!","El servicio está registrado");
             return;
         }
         if(view == btnUpdateService){
