@@ -23,7 +23,7 @@ public class CarRegistryActivity extends AppCompatActivity implements View.OnCli
 
         txtPlate = findViewById(R.id.txtPlate);
         txtTrademark = findViewById(R.id.txtTrademark);
-        txtPlate = findViewById(R.id.txtModel);
+        txtModel = findViewById(R.id.txtModel);
         txtYear = findViewById(R.id.txtYear);
 
         btnInsertCar = findViewById(R.id.btnInsertCar);
