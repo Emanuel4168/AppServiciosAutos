@@ -32,7 +32,7 @@ public class RemoveActivity extends AppCompatActivity implements View.OnClickLis
         imgLogo = findViewById(R.id.imgLogo2);
         Intent intent = getIntent();
         type = intent.getIntExtra("type",0);
-        imgLogo= findViewById(R.id.imgLogo);
+        imgLogo= findViewById(R.id.imgLogo2);
         model = new PersonModel(this);
         txtID.setHint("RFC:");
         if(type == 1) {

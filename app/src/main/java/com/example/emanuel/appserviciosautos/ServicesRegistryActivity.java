@@ -28,7 +28,7 @@ public class ServicesRegistryActivity extends AppCompatActivity implements View.
         txtPrice = findViewById(R.id.txtPrice);
         txtDate = findViewById(R.id.txtDate);
 
-        btnInsertService = findViewById(R.id.btnInsertCar);
+        btnInsertService = findViewById(R.id.btnInsertService);
         btnUpdateService = findViewById(R.id.btnUpdateService);
 
         btnInsertService.setOnClickListener(this);
