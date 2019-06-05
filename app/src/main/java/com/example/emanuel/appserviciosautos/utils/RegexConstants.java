@@ -3,7 +3,7 @@ package com.example.emanuel.appserviciosautos.utils;
 public class RegexConstants {
 
     public final static String RFC_REGEX = "[A-Za-z]{4}[0-9]{9}";
-    public final static String NAME_REGEX = "[A-Za-z]{10,30}";
+    public final static String NAME_REGEX = "[A-Za-z]{3,20}";
     public final static String CITY_REGEX = "[A-Za-z]{4,20}";
 
     public final static String PLATE_REGEX = "[A-Za-z]{3}[0-9]{4}";

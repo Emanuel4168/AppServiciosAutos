@@ -12,6 +12,7 @@ import com.example.emanuel.appserviciosautos.models.CarModel;
 import com.example.emanuel.appserviciosautos.models.PersonModel;
 import com.example.emanuel.appserviciosautos.models.ServiceModel;
 import com.example.emanuel.appserviciosautos.models.data_access_layers.SQLiteModel;
+import com.example.emanuel.appserviciosautos.utils.Routines;
 
 public class RemoveActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -56,10 +57,13 @@ public class RemoveActivity extends AppCompatActivity implements View.OnClickLis
 
         if(!model.delete(txtID.getText().toString())){
             //error
+            Routines.showNotificationMessage(this,"OOPS!",model.getCurrentError());
             return;
         }
 
         //success
+        txtID.setText("");
+        Routines.showNotificationMessage(this,"CORRECTO!","La operación fué todo un éxito");
 
     }
 

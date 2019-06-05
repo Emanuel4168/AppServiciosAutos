@@ -53,6 +53,7 @@ public class ServicesRegistryActivity extends AppCompatActivity implements View.
                 return;
             }
             //exito
+            clean();
             Routines.showNotificationMessage(this,"CORRECTO!","El nuevo servicio está listo");
             return;
         }
@@ -63,6 +64,7 @@ public class ServicesRegistryActivity extends AppCompatActivity implements View.
                 return;
             }
             //exito
+            clean();
             Routines.showNotificationMessage(this,"CORRECTO!","Modificación exitosa");
             return;
         }
@@ -103,5 +105,17 @@ public class ServicesRegistryActivity extends AppCompatActivity implements View.
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+
+    private void clean(){
+        txtOrder.setText("");
+        txtPlateService.setText("");
+        txtRFCService.setText("");
+        txtKm.setText("");
+        txtPrice.setText("");
+        txtDate.setText("");
+
+        txtOrder.requestFocus();
     }
 }

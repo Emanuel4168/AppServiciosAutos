@@ -88,4 +88,12 @@ public class RegistryActivity extends AppCompatActivity implements View.OnClickL
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
+
+    private void clean(){
+        txtRFC.setText("");
+        txtName.setText("");
+        txtCity.setText("");
+
+        txtRFC.requestFocus();
+    }
 }
