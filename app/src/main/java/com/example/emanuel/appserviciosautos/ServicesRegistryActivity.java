@@ -49,19 +49,9 @@ public class ServicesRegistryActivity extends AppCompatActivity implements View.
                 txtDate.getText().toString()};
 
         if(view == btnInsertService){
-            if(!model.insert(car)){
+            if(!model.insert(car)) {
                 //error
-                Routines.showNotificationMessage(this,"¡OOPS!",model.getCurrentError());
-                return;
-            }
-
-            if(carModel.consult(car[1])==null){
-                Routines.showNotificationMessage(this,"¡OOPS!","No existe el auto.");
-                return;
-            }
-
-            if(personModel.consult(car[2])==null){
-                Routines.showNotificationMessage(this,"¡OOPS!","No existe la persona.");
+                Routines.showNotificationMessage(this, "¡OOPS!", model.getCurrentError());
                 return;
             }
 
